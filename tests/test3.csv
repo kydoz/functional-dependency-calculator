@@ -1,0 +1,348 @@
+numSp,nomSp,prenomSp,pays,categorieSp,dateNaisSp,numEq
+1001,MARRON,Benjamin,Grande Bretagne,masculin,1999-01-08 00:00:00,30
+1002,BERNE,Pascal,Grece,masculin,1986-02-08 00:00:00,
+1003,LAURENDEAU,Patrick,Grece,masculin,1986-09-06 00:00:00,
+1004,ANTON,Stephanie,Honduras,masculin,1990-12-14 00:00:00,
+1005,RAOUL,Thierry,Honduras,masculin,1991-04-13 00:00:00,84
+1006,VALLON,Thierry,Honduras,masculin,1991-05-13 00:00:00,84
+1007,BEAUREPAIRE,Olivier,Hongrie,masculin,1984-12-15 00:00:00,33
+1008,FOURMAUX,Olivier,Hongrie,masculin,1985-01-14 00:00:00,35
+1009,LOTITO,Noel,Hongrie,masculin,1984-09-16 00:00:00,35
+1010,NUSSWITZ,Nicolas,Hongrie,masculin,1984-04-19 00:00:00,33
+1011,PIETROLONARDO,Olivier,Hongrie,masculin,1985-03-15 00:00:00,35
+1012,RUSCON,Nicolas,Hongrie,masculin,1984-05-19 00:00:00,33
+1012,RUSCON,Nicolas,Hongrie,masculin,1984-05-19 00:00:00,35
+1013,TSINGOS,Nicolas,Hongrie,masculin,1984-06-18 00:00:00,
+1014,CANAVAGGIO,Jean-Francois,Irlande,masculin,1999-07-15 00:00:00,
+1015,DAVID,Laurent,Irlande,masculin,1982-01-30 00:00:00,74
+1016,GERBI,Jean-Philippe,Irlande,masculin,1980-06-09 00:00:00,74
+1017,AUVITY,Delphine,Allemagne,feminin,1992-11-18 00:00:00,4
+1018,HOUDIER,Claire,Allemagne,feminin,1991-11-24 00:00:00,1
+1019,MANROT,Crystel,Allemagne,feminin,1992-04-22 00:00:00,1
+1020,RONAT,Sandrine,Allemagne,feminin,1989-01-23 00:00:00,
+1021,ROUX-MOLLARD,Corinne,Allemagne,feminin,1992-03-23 00:00:00,1
+1022,BAUD,Claude,Allemagne,masculin,1992-01-23 00:00:00,4
+1023,CHARBONNIER,Christophe,Allemagne,masculin,1991-07-27 00:00:00,2
+1024,CONTE,Remy,Allemagne,masculin,1988-02-28 00:00:00,
+1025,GERARDIN,Remy,Allemagne,masculin,1988-03-29 00:00:00,71
+1026,THIERY,Cyril,Allemagne,masculin,1992-06-21 00:00:00,71
+1027,TIAMIOU,Saliou,Allemagne,masculin,1988-07-27 00:00:00,2
+1028,VIGNIELLO,Serge,Allemagne,masculin,1989-06-22 00:00:00,2
+1029,YVOIR,Sebastien,Allemagne,masculin,1989-03-24 00:00:00,2
+1030,MOUNIER,Philippe,Australie,masculin,1986-12-05 00:00:00,72
+1031,RODRIGUEZ,Philippe,Australie,masculin,1987-01-04 00:00:00,72
+1032,BRULEY,Christophe,Autriche,masculin,1991-06-27 00:00:00,6
+1032,BRULEY,Christophe,Autriche,masculin,1991-06-27 00:00:00,7
+1033,LE MEN,Stephane,Autriche,masculin,1990-08-16 00:00:00,90
+1034,MARTIN-MICHIELLOT,silvere,Autriche,masculin,1989-08-21 00:00:00,6
+1034,MARTIN-MICHIELLOT,silvere,Autriche,masculin,1989-08-21 00:00:00,7
+1035,SENET,Christian,Autriche,masculin,1990-10-30 00:00:00,7
+1035,SENET,Christian,Autriche,masculin,1990-10-30 00:00:00,90
+1036,SIRVENT,Xavier,Autriche,masculin,1992-12-03 00:00:00,7
+1037,THUREL,Edith,Belgique,feminin,1993-03-18 00:00:00,
+1038,FABRE,Christophe,Belgique,masculin,1991-08-26 00:00:00,8
+1038,FABRE,Christophe,Belgique,masculin,1991-08-26 00:00:00,91
+1039,GRANJARD,David,Belgique,masculin,1992-09-19 00:00:00,73
+1040,LALANNE,Denis,Belgique,masculin,1993-01-17 00:00:00,91
+1041,MACQUART,Christophe,Belgique,masculin,1991-09-25 00:00:00,8
+1042,PATRIGEON,Claude,Belgique,masculin,1992-02-22 00:00:00,73
+1043,CHEYNET,Philippe,Bresil,masculin,1987-03-05 00:00:00,
+1044,GEHANT,Pierre-Michel,Bresil,masculin,1987-08-02 00:00:00,
+1045,POURCHET,Regis,Bresil,masculin,1988-01-29 00:00:00,
+1046,DI MARCO,Helene,Canada,feminin,1998-05-21 00:00:00,9
+1047,GASPARRO,Vanessa,Canada,feminin,1992-01-08 00:00:00,9
+1047,GASPARRO,Vanessa,Canada,feminin,1992-01-08 00:00:00,10
+1048,GIBERT,Veronique,Canada,feminin,1992-02-07 00:00:00,10
+1049,MONIN,Isabelle,Canada,feminin,1998-10-18 00:00:00,9
+1050,TRIOLLE,Valerie,Canada,feminin,1991-12-09 00:00:00,9
+1050,TRIOLLE,Valerie,Canada,feminin,1991-12-09 00:00:00,10
+1051,ARNOUX,Yannick,Canada,masculin,1993-03-03 00:00:00,
+1052,BENEDETTO,Franck,Canada,masculin,1995-10-04 00:00:00,11
+1053,CAFFAREL,Florent,Canada,masculin,1995-09-04 00:00:00,11
+1054,CHARON,Jean-Pascal,Canada,masculin,1980-04-10 00:00:00,13
+1055,CORTESE,Freddy,Canada,masculin,1996-04-01 00:00:00,11
+1056,CRUZ-MERMY,Jerome,Canada,masculin,1980-08-08 00:00:00,11
+1056,CRUZ-MERMY,Jerome,Canada,masculin,1980-08-08 00:00:00,12
+1057,DE COCK,Jerome,Canada,masculin,1980-09-07 00:00:00,11
+1057,DE COCK,Jerome,Canada,masculin,1980-09-07 00:00:00,13
+1058,DESCOURS,Herve,Canada,masculin,1998-08-19 00:00:00,14
+1059,DURON,Wilfrid,Canada,masculin,1992-10-04 00:00:00,11
+1060,EL MOUSSAOUI,Wassim,Canada,masculin,1992-09-04 00:00:00,11
+1061,FOURNIGAULT,Vincent,Canada,masculin,1992-04-07 00:00:00,12
+1062,FRANCHINI,Jean-Philippe,Canada,masculin,1980-05-10 00:00:00,11
+1063,GALOTTA,Giovanni,Canada,masculin,1997-10-23 00:00:00,11
+1064,KAPPES,Jean-Francois,Canada,masculin,1999-08-14 00:00:00,13
+1064,KAPPES,Jean-Francois,Canada,masculin,1999-08-14 00:00:00,14
+1065,MAGNARD,Frederic,Canada,masculin,1996-12-27 00:00:00,
+1066,MARANGOZOV,Vladimir,Canada,masculin,1992-06-06 00:00:00,11
+1066,MARANGOZOV,Vladimir,Canada,masculin,1992-06-06 00:00:00,12
+1067,MARTIN,Jerome,Canada,masculin,1980-10-07 00:00:00,11
+1067,MARTIN,Jerome,Canada,masculin,1980-10-07 00:00:00,12
+1067,MARTIN,Jerome,Canada,masculin,1980-10-07 00:00:00,13
+1068,MERIEUX,Xavier,Canada,masculin,1992-11-03 00:00:00,11
+1069,MOSLEH,Walid,Canada,masculin,1992-07-06 00:00:00,11
+1070,MOULIN,Yann,Canada,masculin,1993-01-02 00:00:00,14
+1071,YLLOUZ,Jacques,Canada,masculin,1998-12-17 00:00:00,14
+1072,YOUSSEF,Walid,Canada,masculin,1992-08-05 00:00:00,11
+1073,CHAPTAL,Estelle,Chine,feminin,1994-09-09 00:00:00,
+1074,CHARRAS,Eric,Chine,masculin,1994-03-13 00:00:00,
+1075,COPPEL,Eric,Chine,masculin,1994-04-12 00:00:00,
+1076,PIASENTIN,Eric,Chine,masculin,1994-05-12 00:00:00,
+1077,ARNOD-PRIN,Karine,Coree,feminin,1981-06-04 00:00:00,16
+1078,KONG,Lan-Heung,Coree,feminin,1981-08-03 00:00:00,17
+1079,AMABERT,Jean-Christophe,Coree,masculin,1999-03-17 00:00:00,
+1080,CHANEAC,Jean-Francois,Coree,masculin,1999-05-16 00:00:00,
+1081,COTTIER,Jean-Claude,Coree,masculin,1999-04-16 00:00:00,
+1082,DE BENEDITTIS,Jean,Coree,masculin,1999-01-16 00:00:00,16
+1083,DEVAUD,Jean-Jacques,Coree,masculin,1999-10-13 00:00:00,15
+1084,DUBOIS,Jean-Remy,Coree,masculin,1980-07-09 00:00:00,15
+1085,GUDEFIN,Jean-Francois,Coree,masculin,1999-06-15 00:00:00,15
+1086,JAYET,Jean,Coree,masculin,1999-02-15 00:00:00,17
+1087,LEULLIER,Jerome,Coree,masculin,1981-01-05 00:00:00,15
+1088,MONTLAHUC,Jean-Jacques,Coree,masculin,1999-11-12 00:00:00,15
+1089,REY,Jean-Francois,Coree,masculin,1999-09-13 00:00:00,15
+1090,ROMEY,Jean-Marc,Coree,masculin,1980-02-10 00:00:00,15
+1091,TRIVI,Jean-Michel,Coree,masculin,1980-03-11 00:00:00,15
+1092,BRET,Celine,Espagne,feminin,1990-08-01 00:00:00,18
+1093,MOSCHETTO,Christine,Espagne,feminin,1990-12-29 00:00:00,18
+1094,SEGUIER,Catherine,Espagne,feminin,1990-01-03 00:00:00,18
+1095,ROBERTSON,Nancy,Estonie,feminin,1983-09-22 00:00:00,19
+1096,VESCO,Nathalie,Estonie,feminin,1984-03-20 00:00:00,19
+1097,DORNIER,Olivier,Estonie,masculin,1985-05-14 00:00:00,
+1098,COLLET-BEILLON,Marie-Pierre,Finlande,feminin,1983-04-25 00:00:00,20
+1099,FRANCE,Laure,Finlande,feminin,1981-09-02 00:00:00,20
+1100,CASTRO,Lionel,Finlande,masculin,1982-07-29 00:00:00,24
+1101,CHAUDANSON,Lionel,Finlande,masculin,1982-08-28 00:00:00,21
+1101,CHAUDANSON,Lionel,Finlande,masculin,1982-08-28 00:00:00,22
+1102,DECLOEDT,Loic,Finlande,masculin,1982-09-27 00:00:00,23
+1103,MC CARTHY,Kevin,Finlande,masculin,1981-07-04 00:00:00,21
+1103,MC CARTHY,Kevin,Finlande,masculin,1981-07-04 00:00:00,23
+1104,MESTRE,Lionel,Finlande,masculin,1982-06-29 00:00:00,22
+1104,MESTRE,Lionel,Finlande,masculin,1982-06-29 00:00:00,24
+1105,SCHEIDECKER,Laurent,Finlande,masculin,1982-05-30 00:00:00,21
+1105,SCHEIDECKER,Laurent,Finlande,masculin,1982-05-30 00:00:00,22
+1105,SCHEIDECKER,Laurent,Finlande,masculin,1982-05-30 00:00:00,23
+1105,SCHEIDECKER,Laurent,Finlande,masculin,1982-05-30 00:00:00,24
+1106,SEGAUD,Laurent,Finlande,masculin,1981-10-02 00:00:00,21
+1107,TOLLIUS-GLUSENKAMP,Laurent,Finlande,masculin,1981-11-01 00:00:00,23
+1108,VIGNERON,Luc,Finlande,masculin,1982-10-27 00:00:00,22
+1109,BORDON,Sophie,France,feminin,1989-09-20 00:00:00,28
+1109,BORDON,Sophie,France,feminin,1989-09-20 00:00:00,81
+1110,CAMPANI,Carole,France,feminin,1999-11-04 00:00:00,
+1111,CHARRIER,Annick,France,feminin,1998-02-13 00:00:00,29
+1111,CHARRIER,Annick,France,feminin,1998-02-13 00:00:00,81
+1112,DI,Sen,France,feminin,1989-04-23 00:00:00,28
+1112,DI,Sen,France,feminin,1989-04-23 00:00:00,81
+1113,DUTEL,Annick,France,feminin,1998-03-14 00:00:00,27
+1113,DUTEL,Annick,France,feminin,1998-03-14 00:00:00,81
+1114,MATUSCHA,Alle,France,feminin,1997-10-16 00:00:00,25
+1115,PILLOUD,Andree,France,feminin,1997-11-15 00:00:00,29
+1116,REY,Sophie,France,feminin,1989-10-20 00:00:00,28
+1117,REYMOND,Annick,France,feminin,1998-04-13 00:00:00,26
+1118,SPALANZANI,Anne,France,feminin,1997-12-15 00:00:00,29
+1119,ZANON,Anne,France,feminin,1998-01-14 00:00:00,29
+1120,ANGELOTTI,Bruno,France,masculin,1999-09-05 00:00:00,60
+1121,BERNARD,Stephane,France,masculin,1989-11-19 00:00:00,
+1122,BONAFE,Bernard,France,masculin,1999-04-08 00:00:00,60
+1123,BONHOMME,Stephane,France,masculin,1989-12-19 00:00:00,60
+1124,CHANNAC,Stephane,France,masculin,1990-01-18 00:00:00,60
+1125,DE SEQUEIRA,Alexis,France,masculin,1997-09-16 00:00:00,
+1126,ERDEMLI,Attila,France,masculin,1998-11-09 00:00:00,60
+1127,LUTCHMUN,Alexander,France,masculin,1997-07-18 00:00:00,27
+1128,MARTIN,Arnaud,France,masculin,1998-07-12 00:00:00,60
+1129,MAURENT,Bernard,France,masculin,1999-05-08 00:00:00,60
+1130,MEYNENT,Alain,France,masculin,1997-06-18 00:00:00,25
+1131,PERRIN,Antoine,France,masculin,1998-05-13 00:00:00,60
+1132,PIERLAS,Bernard,France,masculin,1999-06-07 00:00:00,60
+1133,RECH,Benoit,France,masculin,1999-02-07 00:00:00,60
+1134,SHEEDY,Senan,France,masculin,1989-05-23 00:00:00,60
+1135,TOPOL,Alexandre,France,masculin,1997-08-17 00:00:00,26
+1136,BAYON,Gilles,Gabon,masculin,1997-09-23 00:00:00,
+1137,ELISEI,Frederic,Gabon,masculin,1996-11-27 00:00:00,
+1138,VERNAY,Francois,Gabon,masculin,1996-02-01 00:00:00,
+1139,CHIRAT,Veronique,Grande Bretagne,feminin,1992-03-08 00:00:00,
+1140,NGUYEN,Sylvie,Grande Bretagne,feminin,1991-03-14 00:00:00,
+1141,DEGUET,Anton,Grande Bretagne,masculin,1998-06-12 00:00:00,30
+1142,GALLION,Bruno,Grande Bretagne,masculin,1999-10-05 00:00:00,30
+1143,KHADROUCHE,Akim,Grande Bretagne,masculin,1997-05-19 00:00:00,
+1144,LE NEPVEU,Thierry,Grande Bretagne,masculin,1991-11-09 00:00:00,30
+1145,SALOMON,Christophe,USA,masculin,1991-05-28 00:00:00,49
+1146,WU,Chih-Chung,USA,masculin,1990-08-31 00:00:00,
+1147,CHIESA,Geraldine,Ukraine,feminin,1997-04-26 00:00:00,70
+1148,DE CHOUDENS,Guillaume,Ukraine,masculin,1997-12-22 00:00:00,54
+1149,ELIE,Jacques,Ukraine,masculin,1998-11-17 00:00:00,80
+1150,GALTIER,Gerry,Ukraine,masculin,1997-05-26 00:00:00,70
+1151,GENEVE,Guillaume,Ukraine,masculin,1998-01-21 00:00:00,54
+1152,JULLIAND,Gregory,Ukraine,masculin,1997-11-22 00:00:00,80
+1153,LABORIE,Guillaume,Ukraine,masculin,1998-02-20 00:00:00,54
+1154,LELOUP,Herve,Ukraine,masculin,1998-06-20 00:00:00,54
+1155,MAILLIET,Guillaume,Ukraine,masculin,1998-03-22 00:00:00,54
+1156,ORTHEAU,Gilles,Ukraine,masculin,1997-06-25 00:00:00,80
+1157,PETITJEAN,Herve,Ukraine,masculin,1998-07-20 00:00:00,54
+1158,PETRAUD,Guillaume,Ukraine,masculin,1998-04-21 00:00:00,54
+1159,PONTON,Gilles,Ukraine,masculin,1997-07-25 00:00:00,
+1160,POUTE DE PUYBAUDET,Gilles,Ukraine,masculin,1997-08-24 00:00:00,80
+1161,VAUDAUX,Hubert,Ukraine,masculin,1998-09-18 00:00:00,54
+1162,MATHEVET,Jerome,Irlande,masculin,1980-12-06 00:00:00,74
+1163,VAISSIERE,Jean-Luc,Irlande,masculin,1999-12-12 00:00:00,
+1164,WOHLSCHLEGEL,Jean-Marc,Irlande,masculin,1980-01-11 00:00:00,74
+1165,BION,Beatrice,Italie,feminin,1998-12-09 00:00:00,75
+1166,BRUN,Caroline,Italie,feminin,1999-12-04 00:00:00,38
+1167,COLIN,Sandrine,Italie,feminin,1988-10-25 00:00:00,36
+1168,FRONT,Agnes,Italie,feminin,1997-04-19 00:00:00,37
+1168,FRONT,Agnes,Italie,feminin,1997-04-19 00:00:00,38
+1169,MANGIN,Sandrine,Italie,feminin,1988-11-24 00:00:00,37
+1170,MURE-RAVAUD,Sandra,Italie,feminin,1988-09-25 00:00:00,75
+1171,ROQUES,Sandrine,Italie,feminin,1988-12-24 00:00:00,37
+1171,ROQUES,Sandrine,Italie,feminin,1988-12-24 00:00:00,38
+1172,AWADA,Sami,Italie,masculin,1988-08-26 00:00:00,40
+1173,DESSENE,Thierry,Italie,masculin,1991-07-12 00:00:00,39
+1174,DOWLUT,Arvind,Italie,masculin,1998-10-10 00:00:00,
+1175,DUMON,Richard,Italie,masculin,1988-04-28 00:00:00,41
+1176,GRELLIER,Thierry,Italie,masculin,1991-08-11 00:00:00,42
+1177,HAMIDECHE,Said,Italie,masculin,1988-06-27 00:00:00,41
+1177,HAMIDECHE,Said,Italie,masculin,1988-06-27 00:00:00,42
+1178,JEANJEAN,Stephane,Italie,masculin,1990-07-17 00:00:00,39
+1179,LACHAUD,Thierry,Italie,masculin,1991-09-10 00:00:00,39
+1180,MARCELIN,Richard-Andre,Italie,masculin,1988-05-28 00:00:00,41
+1181,MEGY,Stephane,Italie,masculin,1990-10-15 00:00:00,36
+1182,REYNIER,Stephane,Italie,masculin,1990-11-14 00:00:00,40
+1183,SANDRAZ,Dominique,Italie,masculin,1997-09-16 00:00:00,
+1184,SOUDAN,Sebastien,Italie,masculin,1989-02-22 00:00:00,40
+1184,SOUDAN,Sebastien,Italie,masculin,1989-02-22 00:00:00,42
+1185,TABEUTE,Bouchaib,Italie,masculin,1999-07-07 00:00:00,
+1186,BRUN,Fabienne,Japon,feminin,1994-11-08 00:00:00,
+1187,COFFY,Florence,Japon,feminin,1995-05-07 00:00:00,
+1188,GUETTE,Florence,Japon,feminin,1995-06-06 00:00:00,
+1189,GUYONNET,Florence,Japon,feminin,1995-07-06 00:00:00,
+1190,BENET,Etienne,Japon,masculin,1994-10-09 00:00:00,76
+1191,GALLAY,Fabrice,Japon,masculin,1994-12-08 00:00:00,76
+1192,MANCUSO,Fabrizio,Japon,masculin,1995-03-08 00:00:00,76
+1193,PACIOCCO,Eric,Japon,masculin,1994-01-12 00:00:00,76
+1194,SCHMID,Eric,Japon,masculin,1994-02-11 00:00:00,76
+1195,ZIADE,Fahez,Japon,masculin,1995-04-07 00:00:00,76
+1196,GAY,Emmanuelle,Kenya,feminin,1993-07-16 00:00:00,
+1197,CHERVIN,David,Kenya,masculin,1992-07-21 00:00:00,
+1198,DAMMAN,David,Kenya,masculin,1992-08-20 00:00:00,
+1199,ANCEAU,Estelle,Liechtenstein,feminin,1994-08-10 00:00:00,
+1200,DESCHAUX-BLANC,Florence,Liechtenstein,feminin,1995-08-05 00:00:00,
+1201,NIVON,Francoise,Liechtenstein,feminin,1996-03-02 00:00:00,
+1202,FOUREL,Franck,Liechtenstein,masculin,1995-11-03 00:00:00,
+1203,BERGER,Olivier,Lituanie,masculin,1985-06-13 00:00:00,
+1204,CHANAS,Olivier,Lituanie,masculin,1985-07-13 00:00:00,
+1205,DUMAS,Olivier,Lituanie,masculin,1985-08-12 00:00:00,
+1206,MENEGHINI,Pascal,Lituanie,masculin,1986-03-10 00:00:00,
+1207,NEYROUD,Olivier,Lituanie,masculin,1985-09-11 00:00:00,
+1208,BEN AMOR,Karim,Luxembourg,masculin,1981-04-05 00:00:00,
+1209,DESRICHARD,Julien,Luxembourg,masculin,1981-02-04 00:00:00,77
+1210,LACROIX,Julien,Luxembourg,masculin,1981-03-06 00:00:00,77
+1211,MARIR,Karim,Luxembourg,masculin,1981-05-05 00:00:00,77
+1212,MILLET,Jerome,Luxembourg,masculin,1980-11-06 00:00:00,77
+1213,CHAHBAZI,Poupak,Mexique,feminin,1987-10-01 00:00:00,
+1214,TRAVERS,Rachel,Mexique,feminin,1987-10-31 00:00:00,
+1215,BERNARD-PERROTTEY,Raphael,Mexique,masculin,1987-12-30 00:00:00,
+1216,BERTRAND,Pierre-Yves,Mexique,masculin,1987-09-01 00:00:00,
+1217,HASNOU,Rachid,Mexique,masculin,1987-11-30 00:00:00,
+1218,BERNARD,Nathalie,Norvege,feminin,1983-10-22 00:00:00,62
+1219,BERTRAND,Nathalie,Norvege,feminin,1983-11-21 00:00:00,43
+1220,DE ROTALIER,Marie-Celine,Norvege,feminin,1983-02-24 00:00:00,
+1221,KARAM,Myriam,Norvege,feminin,1983-08-23 00:00:00,43
+1222,ROZENKNOP,Nathalie,Norvege,feminin,1983-12-21 00:00:00,43
+1223,VILLEDIEU,Nathalie,Norvege,feminin,1984-01-20 00:00:00,43
+1224,DA VINHA,Manuel,Norvege,masculin,1982-11-26 00:00:00,62
+1225,FOMBARON,Marc,Norvege,masculin,1982-12-26 00:00:00,
+1226,HOURDIN,Mathieu,Norvege,masculin,1983-06-24 00:00:00,
+1227,CHOMAT,Stephane,Panama,masculin,1990-02-17 00:00:00,
+1228,COULAND,Stephane,Panama,masculin,1990-03-19 00:00:00,
+1229,PESEUX,Stephane,Panama,masculin,1990-04-18 00:00:00,
+1230,RUAUD,Stephane,Panama,masculin,1990-05-18 00:00:00,
+1231,BERNARDON,Marlene,pays Bas,feminin,1983-05-25 00:00:00,83
+1232,EBENGOU,Olga,pays Bas,feminin,1984-11-15 00:00:00,78
+1232,EBENGOU,Olga,pays Bas,feminin,1984-11-15 00:00:00,83
+1233,MANEVAL,Muriel,pays Bas,feminin,1983-07-24 00:00:00,78
+1233,MANEVAL,Muriel,pays Bas,feminin,1983-07-24 00:00:00,83
+1234,PECOT,Nathalie,pays Bas,feminin,1984-02-19 00:00:00,44
+1235,TOURNIER,Marie-Laure,pays Bas,feminin,1983-03-26 00:00:00,78
+1235,TOURNIER,Marie-Laure,pays Bas,feminin,1983-03-26 00:00:00,83
+1236,CHAIX,Norbert,pays Bas,masculin,1984-10-16 00:00:00,
+1237,GANDRIAU,Nicolas,pays Bas,masculin,1984-07-18 00:00:00,
+1238,MIQUEL,Nicolas,pays Bas,masculin,1984-08-17 00:00:00,
+1239,TISSERANT,Marc,pays Bas,masculin,1983-01-25 00:00:00,44
+1240,CROUZET,Frederic,Pologne,masculin,1996-05-01 00:00:00,45
+1241,DELEUZE,Frederic,Pologne,masculin,1996-05-31 00:00:00,45
+1242,KERSULEC,Frederic,Pologne,masculin,1996-06-30 00:00:00,47
+1243,KOENIG,Gerald,Pologne,masculin,1997-03-27 00:00:00,45
+1244,MONTIER,Frederic,Pologne,masculin,1996-07-30 00:00:00,46
+1245,NAHMANI,Frederic,Pologne,masculin,1996-08-29 00:00:00,46
+1245,NAHMANI,Frederic,Pologne,masculin,1996-08-29 00:00:00,47
+1246,PRIN,Frederic,Pologne,masculin,1996-09-28 00:00:00,46
+1246,PRIN,Frederic,Pologne,masculin,1996-09-28 00:00:00,47
+1247,ZANAROLI,Frederic,Pologne,masculin,1996-10-28 00:00:00,45
+1248,ARMAND,Patrice,Portugal,masculin,1986-06-08 00:00:00,
+1249,CLEMENT,Patrick,Portugal,masculin,1986-10-06 00:00:00,
+1250,LEININGER,Philippe,Portugal,masculin,1987-04-04 00:00:00,
+1251,MAGNERON,Philippe,Portugal,masculin,1987-05-04 00:00:00,
+1252,WOLSZTYNSKI,Pierre,Portugal,masculin,1987-07-03 00:00:00,
+1253,DZEAKOU DJOUM,Patricia,Roumanie,feminin,1986-07-08 00:00:00,
+1254,FRACHISSE,Patricia,Roumanie,feminin,1986-08-07 00:00:00,
+1255,DELORME,Patrice,Roumanie,masculin,1986-04-09 00:00:00,
+1256,LEBRUN,Patrice,Roumanie,masculin,1986-05-09 00:00:00,
+1257,TRUCHET,Brigitte,Russie,feminin,1999-08-06 00:00:00,
+1258,GODARD,Arnaud,Russie,masculin,1998-08-11 00:00:00,
+1259,PIERREL,Arnaud,Russie,masculin,1998-09-10 00:00:00,
+1260,AUBLET-CUVELIER,Laurent,Suede,masculin,1981-12-01 00:00:00,
+1261,BOIVIN,Laurent,Suede,masculin,1981-12-31 00:00:00,
+1262,GLENAZ,Laurent,Suede,masculin,1982-03-01 00:00:00,
+1263,GROS,Laurent,Suede,masculin,1982-03-31 00:00:00,
+1264,VIVIER,Laurent,Suede,masculin,1982-04-30 00:00:00,
+1265,AIMARD,Emmanuelle,Suisse,feminin,1993-05-17 00:00:00,61
+1266,PRUDHOMME,Chrystelle,Suisse,feminin,1991-10-25 00:00:00,
+1267,TELMON,Emmanuelle,Suisse,feminin,1993-06-16 00:00:00,61
+1268,THEIS,Delphine,Suisse,feminin,1992-10-19 00:00:00,
+1269,BOISSEAU,Eric,Suisse,masculin,1993-08-15 00:00:00,48
+1270,BOUCHER,Eric,Suisse,masculin,1993-09-14 00:00:00,48
+1270,BOUCHER,Eric,Suisse,masculin,1993-09-14 00:00:00,55
+1271,BOUQUEMONT,Eric,Suisse,masculin,1993-10-14 00:00:00,48
+1271,BOUQUEMONT,Eric,Suisse,masculin,1993-10-14 00:00:00,55
+1272,CARRAUX,Eric,Suisse,masculin,1993-11-13 00:00:00,48
+1272,CARRAUX,Eric,Suisse,masculin,1993-11-13 00:00:00,55
+1273,GAUTHIER,Eric,Suisse,masculin,1993-12-13 00:00:00,48
+1273,GAUTHIER,Eric,Suisse,masculin,1993-12-13 00:00:00,55
+1274,HERAUDEAU,Claude,Suisse,masculin,1991-12-24 00:00:00,55
+1275,LENFANT,Cyriaque,Suisse,masculin,1992-05-22 00:00:00,48
+1275,LENFANT,Cyriaque,Suisse,masculin,1992-05-22 00:00:00,55
+1276,NOAILLY,Emmanuel,Suisse,masculin,1993-04-17 00:00:00,48
+1276,NOAILLY,Emmanuel,Suisse,masculin,1993-04-17 00:00:00,55
+1277,TALLARON,Denis,Suisse,masculin,1992-12-18 00:00:00,48
+1277,TALLARON,Denis,Suisse,masculin,1992-12-18 00:00:00,55
+1278,BENISTAND,Pascal,Tchek-Slovaque,masculin,1985-10-11 00:00:00,53
+1279,HERAUD,Pascal,Tchek-Slovaque,masculin,1985-11-10 00:00:00,
+1280,LEFRANCOIS,Pascal,Tchek-Slovaque,masculin,1985-12-10 00:00:00,53
+1281,ROUCHON,Pascal,Tchek-Slovaque,masculin,1986-01-09 00:00:00,
+1282,AVENTURIER,Cecile,USA,feminin,1990-02-02 00:00:00,79
+1283,BENDIX,Cecilia,USA,feminin,1990-05-03 00:00:00,51
+1284,BROUSTAUT,Severine,USA,feminin,1989-07-22 00:00:00,
+1285,CHARPY,Celia,USA,feminin,1990-07-02 00:00:00,52
+1286,DUBOIS-HECTOR,Cecile,USA,feminin,1990-03-04 00:00:00,79
+1287,DUMON,Sylvie,USA,feminin,1991-02-12 00:00:00,79
+1288,JURDIC,Yolande,USA,feminin,1993-04-02 00:00:00,79
+1289,ROUQUET,Christine,USA,feminin,1990-11-29 00:00:00,50
+1290,BERARD,Francois,USA,masculin,1996-01-02 00:00:00,
+1291,BERNARDIN,Christophe,USA,masculin,1991-01-28 00:00:00,51
+1292,BERTHIER,Yann,USA,masculin,1993-02-01 00:00:00,49
+1293,BOLE-FEYSOT,Eric,USA,masculin,1994-06-11 00:00:00,49
+1294,BOUCARD,Thierry,USA,masculin,1991-06-12 00:00:00,49
+1295,CHASTAN,Eric,USA,masculin,1994-07-11 00:00:00,49
+1296,DAIMO,Cedric,USA,masculin,1990-06-02 00:00:00,
+1297,DESCHAMPS,Christophe,USA,masculin,1991-02-27 00:00:00,49
+1298,ESCAT,Christophe,USA,masculin,1991-03-29 00:00:00,50
+1299,ESCAT,Stephane,USA,masculin,1990-06-17 00:00:00,49
+1300,GERFAUD-VALENTIN,Fabrice,USA,masculin,1995-01-07 00:00:00,49
+1301,GILLETTE,Christophe,USA,masculin,1991-04-28 00:00:00,49
+1302,JOUVE,Vincent,USA,masculin,1992-05-07 00:00:00,49
+1303,KOSCIELNY,Gautier,USA,masculin,1997-02-25 00:00:00,
+1304,LECHAT,Fabrice,USA,masculin,1995-02-06 00:00:00,49
+1305,LISKA,Stephane,USA,masculin,1990-09-15 00:00:00,49
+1306,LYONNET,Franck,USA,masculin,1995-12-03 00:00:00,49
+1307,MANCINI,Frederic,USA,masculin,1997-01-26 00:00:00,
+1308,MOREL-BAHLER,Christian,USA,masculin,1990-09-30 00:00:00,52
