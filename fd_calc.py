@@ -2,7 +2,6 @@ import pandas
 import sys
 from itertools import combinations
 
-
 def calc_final_dets(dets_collection):
     if len(dets_collection)==0:
         return []
@@ -21,44 +20,56 @@ def calc_final_dets(dets_collection):
             min_overlap=new_min_overlap
     return list(min_overlap)
 
-    
-def process_key(key):
-    temp=key.split("!")
-    res={attr:"" for attr in temp}
-    for elem in list(res.keys()):
-        if " " in elem:
-            temp=elem.split()
-            for elem2 in temp:
-                res[elem2]=""
-            del res[elem]
-        else:
-            res[elem]=""
-    return res
-
-def update_on_the_left(hypothesis, on_the_left):
-    attrs=[]
-    for key in hypothesis:
-        attrs=process_key(key)
-        for attr in attrs:
-            on_the_left.add(attr)
-    print("updated on_the_left, results:", list(on_the_left))
+def error(message:str):
+    print(message, file=sys.stderr)
 
 calc={}
 previously_seen={} #dictionary with attr:{} (dictionary of values)
 previous_rows={}
 data:pandas.DataFrame
 on_the_left=set()
-file=sys.argv[1]
-if file.endswith(".csv"):
-    data = pandas.read_csv(file)
-elif file.endswith(".xlsx"):
-    sheet=sys.argv[2]
-    data=pandas.read_excel("LesJO.xlsx", sheet_name=sheet)
+
+nb_args=len(sys.argv)
+if nb_args>1:
+    file=sys.argv[1]
+    if file.endswith(".csv"):
+        try:
+            data = pandas.read_csv(file)
+        except Exception as e:
+            error("An error occured while reading the chosen csv file:\n" + str(e))
+            sys.exit(1)
+    elif file.endswith(".xlsx"):
+        if nb_args>2:
+            sheet=sys.argv[2]
+            try:
+                data=pandas.read_excel(file, sheet_name=sheet)
+            except Exception as e:
+                error("An error occured while reading the chosen excel file:\n" + str(e))
+                sys.exit(1)
+
+        else:
+            try:
+                xl=pandas.ExcelFile(file)
+            except Exception as e:
+                error("An error occured while reading the chosen excel file:\n" + str(e))
+                sys.exit(1)
+            for i, sheet in enumerate(xl.sheet_names):
+                print(f"{i+1}. {sheet}")
+            sheet_id=-1
+            while sheet_id not in range(1, len(xl.sheet_names)+1):
+                sheet_id=input(f"Choose sheet")
+            data=pandas.read_excel(file, sheet_name=xl.sheet_names[sheet_id-1])
+            
+    else:
+        error("Unsupported file type, currently supported: .csv, .xlsx")
+        sys.exit(1)
 else:
-    sys.exit(1)
+    print(f"Usage: \n\t {sys.executable} {sys.argv[0]} <file_name>.csv \n\t {sys.executable} {sys.argv[0]} <file_name>.xlsx <sheet_name> (optional)")
+    sys.exit(0)
+
 attributes=list(data)
 N=len(attributes)
-print(N)
+#print(N)
 for i in range(1, N):
     print("length of left side:", i)
     res = [comb for comb in combinations(attributes, i)]  
@@ -75,7 +86,6 @@ for i in range(1, N):
                 temp_row.append(val)
             key_row=str(temp_row)
             if key_row in previous_rows:
-                print(key_row, "is in", previous_rows)
                 continue
             temp=[]
             for elem in t:
