@@ -57,7 +57,9 @@ if nb_args>1:
                 print(f"{i+1}. {sheet}")
             sheet_id=-1
             while sheet_id not in range(1, len(xl.sheet_names)+1):
-                sheet_id=input(f"Choose sheet")
+                sheet_id=input(f"Choose sheet: ")
+                if sheet_id.isdigit():
+                    sheet_id=int(sheet_id)
             data=pandas.read_excel(file, sheet_name=xl.sheet_names[sheet_id-1])
             
     else:
