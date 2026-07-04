@@ -24,7 +24,7 @@ def error(message:str):
     print(message, file=sys.stderr)
 
 calc={}
-previously_seen={} #dictionary with attr:{} (dictionary of values)
+previously_seen={}
 previous_rows={}
 data:pandas.DataFrame
 on_the_left=set()
@@ -118,35 +118,41 @@ for i in range(1, N):
     if len(res_unique)<len(res):
         for temp in res:
                 calc={}
-                if str(temp) in res_unique:
+                str_temp=str(temp)
+                if str_temp in res_unique:
                     continue
-                calc[str(temp)]={}
+                calc[str_temp]={}
                 for _,row in data.iterrows():
                     #update(dict, row)
                     vals=[str(row[elem]) for elem in temp]
+                    str_vals=str(vals)
                     if "nan" in vals:
                         continue
                     for attr, val in row.items():
-                        if str(val)=="nan":
+                        str_val=str(val)
+
+                        if str_val=="nan":
                             continue
-                        if str(attr) not in temp:
+
+                        str_attr=str(attr)
+                        if str_attr not in temp:
                             #print(attr, "not in", temp)
                             #update(calc, previously_seen, temp, vals, attr, val)
-                            if str(vals) not in calc[str(temp)]:
-                                calc[str(temp)][str(vals)]={}
-                            if str(attr) not in calc[str(temp)][str(vals)]:
-                                calc[str(temp)][str(vals)][str(attr)]={}
-                            if str(val) not in calc[str(temp)][str(vals)][str(attr)]:
-                                calc[str(temp)][str(vals)][str(attr)][str(val)]=1
+                            if str_vals not in calc[str_temp]:
+                                calc[str_temp][str_vals]={}
+                            if str_attr not in calc[str_temp][str_vals]:
+                                calc[str_temp][str_vals][str_attr]={}
+                            if str_val not in calc[str_temp][str_vals][str_attr]:
+                                calc[str_temp][str_vals][str_attr][str_val]=1
                             else:
-                                calc[str(temp)][str(vals)][str(attr)][str(val)]+=1
+                                calc[str_temp][str_vals][str_attr][str_val]+=1
 
-                    if str(temp) not in previously_seen:
-                        previously_seen[str(temp)]={}
-                    if str(vals) not in previously_seen[str(temp)]:
-                        previously_seen[str(temp)][str(vals)]=1
+                    if str_temp not in previously_seen:
+                        previously_seen[str_temp]={}
+                    if str_vals not in previously_seen[str_temp]:
+                        previously_seen[str_temp][str_vals]=1
                     else:
-                        previously_seen[str(temp)][str(vals)]+=1
+                        previously_seen[str_temp][str_vals]+=1
                         
 
                 fds={}
