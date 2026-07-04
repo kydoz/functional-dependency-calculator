@@ -79,10 +79,7 @@ for i in range(1, N):
         previous_rows={}
         previous_vals={}
         for _, row in data.iterrows():
-            temp_row=[]
-            for _, val in row.items():
-                temp_row.append(val)
-            key_row=str(temp_row)
+            key_row=str([val for _,val in row.items()])
             if key_row in previous_rows:
                 continue
             temp=[]
