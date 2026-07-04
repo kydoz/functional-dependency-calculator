@@ -13,7 +13,7 @@ New York,John
 London,Jenny
 ```
 
-It is easy to conclude from this table (and our program does too) that the single fd verified in this table is $\text{city} \ \rightarrow \ \text{name}$. However, it is up to us to verify if in the given context if it would really be possible retrieve someone's name by the city they are in.  
+It is easy to conclude from this table (and our program does too) that the single fd verified in this table is $\text{city} \ \rightarrow \ \text{name}$. However, it is up to us to verify if, in the given context, it would really be possible retrieve someone's name by the city they are living in.  
 
 ## Setup
 
