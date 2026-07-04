@@ -23,11 +23,7 @@ def calc_final_dets(dets_collection):
 def error(message:str):
     print(message, file=sys.stderr)
 
-calc={}
-previously_seen={}
-previous_rows={}
 data:pandas.DataFrame
-on_the_left=set()
 
 nb_args=len(sys.argv)
 if nb_args>1:
@@ -118,6 +114,7 @@ for i in range(1, N):
     if len(res_unique)<len(res):
         for temp in res:
                 calc={}
+                previously_seen={}
                 str_temp=str(temp)
                 if str_temp in res_unique:
                     continue
