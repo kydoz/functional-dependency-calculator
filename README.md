@@ -1,4 +1,4 @@
-# Functional Dependency Calculator (work in progress)
+# Functional Dependency Calculator  
 
 A program which calculates the verified functional dependencies (**fd**s) in a given table. File types supported are: `.csv` and `.xlsx`.  
 
