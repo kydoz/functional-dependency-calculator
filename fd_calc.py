@@ -2,6 +2,19 @@ import pandas
 import sys
 from itertools import combinations
 
+class FD:
+    left_side:tuple
+    right_side:list
+    unique:bool
+    def __init__(self, left_side, right_side, unique):
+        self.left_side=left_side
+        self.right_side=right_side
+        self.unique=unique
+
+    def to_string(self):
+        return f"{self.left_side} -> {self.right_side}    ({"unique" if self.unique else "repeating"})"
+
+
 def calc_final_dets(dets_collection):
     if len(dets_collection)==0:
         return []
@@ -25,6 +38,7 @@ def error(message:str):
 
 data:pandas.DataFrame
 super_keys=[]
+fds_res=[]
 fd_index=0
 nb_args=len(sys.argv)
 if nb_args>1:
@@ -99,12 +113,31 @@ for i in range(1, N):
     res_unique={}
     if len(res)>0:
         for t in res:
-            if str(t) not in res_non_unique:
+            if str(t) not in res_non_unique: 
+
                 right_side=[attr for attr in attributes if attr not in t]
-                super_keys.append((t, right_side))
-                fd_index+=1
+                fd = FD(t, right_side, True)
                 res_unique[str(t)]=""
-                print(f"({fd_index}) {t} -> {right_side}   (unique)")
+                to_continue=False
+                
+                #if a previous superkey is subset of the new calculated superkey then ignore (redundant)
+                for sup_key in super_keys:
+                    l=len(sup_key.left_side)
+                    count=0
+                    for elem in sup_key.left_side:
+                        if elem in fd.left_side:
+                            count+=1
+                    #print(count, l)
+                    if count == l:
+                        to_continue=True
+                        break
+                if to_continue:
+                    continue
+
+                super_keys.append(fd)
+                fds_res.append(fd)
+                fd_index+=1
+                print(f"({fd_index}) {fd.to_string()}")
 
 
 
@@ -180,9 +213,10 @@ for i in range(1, N):
 
                 if len(fds)>0:
                     for left_side in fds:
-                        #fds_res.append((left_side, fds[left_side]))
+                        fd = FD(left_side, fds[left_side], False)
+                        fds_res.append(fd)
                         fd_index+=1
-                        print(f"({fd_index}) {left_side} -> {fds[left_side]}   (repetition)")
+                        print(f"({fd_index}) {fd.to_string()}")
 
 #print(super_keys)
 
@@ -191,9 +225,10 @@ if len(super_keys)==0:
     print("no candidate keys")
 else:
     print("candidate keys")
-    min_len=len(super_keys[0][0])
-    for t in super_keys:
-        left_side=t[0]
-        if len(left_side)>min_len:
+    min_len=len(super_keys[0].left_side)
+    for fd in super_keys:
+        if len(fd.left_side)>min_len:
             break
-        print(f"{left_side}")
+        print(f"{fd.left_side}")
+
+
