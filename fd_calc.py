@@ -24,7 +24,8 @@ def error(message:str):
     print(message, file=sys.stderr)
 
 data:pandas.DataFrame
-
+super_keys=[]
+fd_index=0
 nb_args=len(sys.argv)
 if nb_args>1:
     file=sys.argv[1]
@@ -99,8 +100,11 @@ for i in range(1, N):
     if len(res)>0:
         for t in res:
             if str(t) not in res_non_unique:
+                right_side=[attr for attr in attributes if attr not in t]
+                super_keys.append((t, right_side))
+                fd_index+=1
                 res_unique[str(t)]=""
-                print(f"{t} -> {str([attr for attr in attributes if attr not in t])}   (unique)")
+                print(f"({fd_index}) {t} -> {right_side}   (unique)")
 
 
 
@@ -159,7 +163,7 @@ for i in range(1, N):
                         dets={}
                         for attr in calc[left_side][vals]:
                             for val in calc[left_side][vals][attr]:
-                                if calc[left_side][vals][attr][val]==previously_seen[left_side][vals]:
+                                if calc[left_side][vals][attr][val]==previously_seen[left_side][vals]: #appeared same amount of times as the left side
                                     dets[attr]=""
                         if len(dets)==0:
                             was_empty=True
@@ -176,4 +180,20 @@ for i in range(1, N):
 
                 if len(fds)>0:
                     for left_side in fds:
-                        print(f"{left_side} -> {fds[left_side]}   (repetition)")
+                        #fds_res.append((left_side, fds[left_side]))
+                        fd_index+=1
+                        print(f"({fd_index}) {left_side} -> {fds[left_side]}   (repetition)")
+
+#print(super_keys)
+
+#calculate candidate key
+if len(super_keys)==0:
+    print("no candidate keys")
+else:
+    print("candidate keys")
+    min_len=len(super_keys[0][0])
+    for t in super_keys:
+        left_side=t[0]
+        if len(left_side)>min_len:
+            break
+        print(f"{left_side}")
