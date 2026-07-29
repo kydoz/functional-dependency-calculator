@@ -1,18 +1,11 @@
 import pandas
 import sys
 from itertools import combinations
+from fd import FD
+from pandas_reader import pandas_reader
+from utils import utils
 
-class FD:
-    left_side:tuple
-    right_side:list
-    unique:bool
-    def __init__(self, left_side, right_side, unique):
-        self.left_side=left_side
-        self.right_side=right_side
-        self.unique=unique
 
-    def to_string(self):
-        return f"{self.left_side} -> {self.right_side}    ({"unique" if self.unique else "repeating"})"
 
 
 def calc_final_dets(dets_collection):
@@ -33,52 +26,12 @@ def calc_final_dets(dets_collection):
             min_overlap=new_min_overlap
     return list(min_overlap)
 
-def error(message:str):
-    print(message, file=sys.stderr)
 
-data:pandas.DataFrame
+data = pandas_reader.read_pandas()
+
 super_keys=[]
 fds_res=[]
 fd_index=0
-nb_args=len(sys.argv)
-if nb_args>1:
-    file=sys.argv[1]
-    if file.endswith(".csv"):
-        try:
-            data = pandas.read_csv(file)
-        except Exception as e:
-            error("An error occured while reading the chosen csv file:\n" + str(e))
-            sys.exit(1)
-    elif file.endswith(".xlsx"):
-        if nb_args>2:
-            sheet=sys.argv[2]
-            try:
-                data=pandas.read_excel(file, sheet_name=sheet)
-            except Exception as e:
-                error("An error occured while reading the chosen excel file:\n" + str(e))
-                sys.exit(1)
-
-        else:
-            try:
-                xl=pandas.ExcelFile(file)
-            except Exception as e:
-                error("An error occured while reading the chosen excel file:\n" + str(e))
-                sys.exit(1)
-            for i, sheet in enumerate(xl.sheet_names):
-                print(f"{i+1}. {sheet}")
-            sheet_id=-1
-            while sheet_id not in range(1, len(xl.sheet_names)+1):
-                sheet_id=input(f"Choose sheet: ")
-                if sheet_id.isdigit():
-                    sheet_id=int(sheet_id)
-            data=pandas.read_excel(file, sheet_name=xl.sheet_names[sheet_id-1])
-            
-    else:
-        error("Unsupported file type, currently supported: .csv, .xlsx")
-        sys.exit(1)
-else:
-    print(f"Usage: \n\t {sys.executable} {sys.argv[0]} <file_name>.csv \n\t {sys.executable} {sys.argv[0]} <file_name>.xlsx <sheet_name> (optional)")
-    sys.exit(0)
 
 attributes=list(data)
 N=len(attributes)
