@@ -1,3 +1,5 @@
+import ast
+
 from pandas import DataFrame
 from itertools import combinations
 from fd import FD
@@ -7,6 +9,7 @@ from pandas_reader import pandas_reader
 class FDCalc:
     data: DataFrame
     super_keys = []
+    result = []
     fd_index = 0
     nb_atts = 0
     attributes = []
@@ -21,6 +24,7 @@ class FDCalc:
     def start(self):
         self.calc_fds()
         self.calc_candidate_keys()
+
 
     def calc_fds(self):
         for i in range(1, self.nb_atts):
@@ -88,6 +92,7 @@ class FDCalc:
                         continue
 
                     self.super_keys.append(fd)
+                    self.result.append(fd)
                     self.fd_index += 1
                     print(f"({self.fd_index}) {fd.to_string()}")
         return res_unique
@@ -133,7 +138,6 @@ class FDCalc:
                     str_attr = str(attr)
                     if str_attr not in temp:
                         # print(attr, "not in", temp)
-                        # update(calc, previously_seen, temp, vals, attr, val)
                         if str_vals not in calc[str_temp]:
                             calc[str_temp][str_vals] = {}
                         if str_attr not in calc[str_temp][str_vals]:
@@ -180,8 +184,9 @@ class FDCalc:
 
             if len(fds) > 0:
                 for left_side in fds:
-                    fd = FD(left_side, fds[left_side], False)
+                    fd = FD(ast.literal_eval(left_side), fds[left_side], False)
                     self.fd_index += 1
+                    self.result.append(fd)
                     print(f"({self.fd_index}) {fd.to_string()}")
 
 

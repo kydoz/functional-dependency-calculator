@@ -1,10 +1,10 @@
 class FD:
-    left_side:tuple
-    right_side:list
+    left_side:set
+    right_side:set
     unique:bool
     def __init__(self, left_side, right_side, unique):
-        self.left_side=left_side
-        self.right_side=right_side
+        self.left_side=set(left_side)
+        self.right_side=set(right_side)
         self.unique=unique
 
     def to_string(self):
