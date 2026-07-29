@@ -14,17 +14,67 @@ class FDCalc:
     nb_atts = 0
     attributes = []
 
-    def __init__(self):
+    def start(self):
         self.data = pandas_reader.read_pandas()
-
+        
         self.attributes = list(self.data)
         self.nb_atts = len(self.attributes)
-        self.start()
-
-    def start(self):
         self.calc_fds()
         self.calc_candidate_keys()
+        self.remove_redundant_fds()
 
+    def remove_redundant_fds(self):
+        reduntants = set()
+        for id, fd in enumerate(self.result):
+            if len(fd.left_side) == 1:
+                continue
+
+            prod = set()
+            for attr in fd.left_side:
+                prod.add(attr)
+            for attr in fd.right_side:
+                prod.add(attr)
+
+            temp = []
+            for id2, fd2 in enumerate(self.result):
+                if id == id2:
+                    continue
+                if (
+                    len(fd2.left_side) >= len(fd.left_side)
+                ):  # we cannot use fd2 to construct fd if it contains more attributes than fd
+                    break
+                count_left = 0
+                for attr in fd2.left_side:
+                    if attr in fd.left_side:
+                        count_left += 1
+                if count_left == len(
+                    fd2.left_side
+                ):  # all left hand side attrs are from fd2 are present in fd
+                    # now we check if there is an attribute on that is determined by fd2 which is also determined by fd
+                    temp.append(id2)
+                    break
+            print(f"for {fd.to_string()}, {[id + 1 for id in temp]}")
+            # calculate everything determined by what we collected
+            for id3 in temp:
+                fd_temp = self.result[id3]
+                prod = set()
+                for att in fd_temp.left_side:
+                    prod.add(att)
+                for att in fd_temp.right_side:
+                    prod.add(att)
+            count = 0
+            for att in fd.right_side:
+                if att in prod:
+                    count += 1
+            if count == len(fd.right_side):
+                print(f"{id + 1} reduntant")
+                reduntants.add(id)
+        i=1
+        for id, fd in enumerate(self.result):
+            if id in reduntants:
+                continue
+            print(f"{i}. {fd.to_string()}")
+            i+=1
 
     def calc_fds(self):
         for i in range(1, self.nb_atts):
@@ -191,4 +241,4 @@ class FDCalc:
 
 
 if __name__ == "__main__":
-    FDCalc()
+    FDCalc().start()
