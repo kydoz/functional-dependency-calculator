@@ -38,13 +38,13 @@ The following instructions can also be found when executing the program without 
 #### With .csv files
 
 ```
-python3 fd_calc.py <file_name>.csv 
+python3 src/fd_calc/fd_calc.py <file_name>.csv 
 ```
 
 #### With .xlsx files
 
 ```
-python3 fd_calc.py <file_name>.xlsx <sheet_name> (optional)
+python3 src/fd_calc/fd_calc.py <file_name>.xlsx <sheet_name> (optional)
 ```
 
 If the sheet name isn't given, the user is prompted with the list of available sheets.  
