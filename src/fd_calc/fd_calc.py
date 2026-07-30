@@ -24,6 +24,7 @@ class FDCalc:
         self.calc_candidate_keys()
         if input("Remove reduntant fds? ").lower() == "y":
             self.remove_redundant_fds()
+        self.print_candidate_keys()
 
     def remove_redundant_fds(self):
         """
@@ -92,17 +93,22 @@ class FDCalc:
             if len(res_unique) < len(res):
                 self.calc_repeating_fds(res, res_unique)
 
-    def calc_candidate_keys(self):
-        # calculate candidate key
-        if len(self.super_keys) == 0:
+    def print_candidate_keys(self):
+        if len(self.candidate_keys)==0:
             print("no candidate keys")
         else:
             print("candidate keys")
+            for fd in self.candidate_keys:
+                print(f"{fd.left_side}")
+
+    def calc_candidate_keys(self):
+        # calculate candidate key
+        if len(self.super_keys) != 0:
             min_len = len(self.super_keys[0].left_side)
             for fd in self.super_keys:
                 if len(fd.left_side) > min_len:
                     break
-                print(f"{fd.left_side}")
+                self.candidate_keys.append(fd)
 
     def calc_unique_fds(self, res):
         res_non_unique = {}
