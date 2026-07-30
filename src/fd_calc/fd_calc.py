@@ -8,7 +8,8 @@ from pandas_reader import pandas_reader
 
 class FDCalc:
     data: DataFrame
-    super_keys = []
+    super_keys = [] #unique fds
+    candidate_keys = []
     result = []
     fd_index = 0
     nb_atts = 0
@@ -21,9 +22,13 @@ class FDCalc:
         self.nb_atts = len(self.attributes)
         self.calc_fds()
         self.calc_candidate_keys()
-        self.remove_redundant_fds()
+        if input("Remove reduntant fds? ").lower() == "y":
+            self.remove_redundant_fds()
 
     def remove_redundant_fds(self):
+        """
+        remove fds which can be recreated by composition and union (Armstrong axioms)
+        """
         reduntants = set()
         for id, fd in enumerate(self.result):
             if len(fd.left_side) == 1:
@@ -49,8 +54,8 @@ class FDCalc:
                         count_left += 1
                 if count_left == len(
                     fd2.left_side
-                ):  # all left hand side attrs are from fd2 are present in fd
-                    # now we check if there is an attribute on that is determined by fd2 which is also determined by fd
+                ):  # all left hand side attrs from fd2 are present in fd
+                    # now we check if there is an attribute that is determined by the lhs fd2 which is also determined by the lhs fd
                     temp.append(id2)
                     break
             print(f"for {fd.to_string()}, {[id + 1 for id in temp]}")
@@ -66,14 +71,15 @@ class FDCalc:
             for att in fd.right_side:
                 if att in prod:
                     count += 1
-            if count == len(fd.right_side):
+            if count == len(fd.right_side): # if everything determined by the lhs of fd is also determined by the lhs of fd2, fd is reduntant
                 print(f"{id + 1} reduntant")
                 reduntants.add(id)
         i=1
         for id, fd in enumerate(self.result):
             if id in reduntants:
+                self.result.pop(id)
                 continue
-            print(f"{i}. {fd.to_string()}")
+            print(f"({i}) {fd.to_string()}")
             i+=1
 
     def calc_fds(self):
