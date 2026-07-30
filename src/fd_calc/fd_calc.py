@@ -58,12 +58,11 @@ class FDCalc:
                 ):  # all left hand side attrs from fd2 are present in fd
                     # now we check if there is an attribute that is determined by the lhs fd2 which is also determined by the lhs fd
                     temp.append(id2)
-                    break
-            print(f"for {fd.to_string()}, {[id + 1 for id in temp]}")
+            print(f"for {fd.to_string()}, {[id2 + 1 for id2 in temp]}")
             # calculate everything determined by what we collected
+            prod = set()
             for id3 in temp:
                 fd_temp = self.result[id3]
-                prod = set()
                 for att in fd_temp.left_side:
                     prod.add(att)
                 for att in fd_temp.right_side:
