@@ -23,7 +23,7 @@ class FDCalc:
         self.nb_atts = len(self.attributes)
         self.calc_fds()
         self.calc_candidate_keys()
-        if input("Remove reduntant fds? ").lower() == "y":
+        if input("Try to remove reduntant fds? y/n (work in progress) ").lower() == "y":
             self.remove_redundant_fds()
         self.print_candidate_keys()
 

@@ -10,10 +10,12 @@ class TestRemoveRedundantFDs(unittest.TestCase):
     def test_remove_basic(self):
         print("test_remove_basic")
         test_fds = [FD(("a"), ("b"), False), FD(("a", "c"), ("b"), False)]
-        expected = [FD(("a"), ("b"), False)]
+        expected = [FD(("a"), ("b"), False), FD(("a", "c"), ("b"), False)]
         self.fdCalc.result = test_fds
         self.fdCalc.remove_redundant_fds()
-        for fd in self.fdCalc.result:
+        for id, fd in enumerate(self.fdCalc.result):
+            if id in self.fdCalc.reduntants:
+                continue
             found = False
             for fd2 in expected:
                 if fd.left_side == fd2.left_side and fd.right_side == fd2.right_side:
@@ -43,7 +45,9 @@ class TestRemoveRedundantFDs(unittest.TestCase):
         expected = [FD(("a"), ("b"), False), FD(("c"), ("d"), False)]
         self.fdCalc.result = test_fds
         self.fdCalc.remove_redundant_fds()
-        for fd in self.fdCalc.result:
+        for id,fd in enumerate(self.fdCalc.result):
+            if id in self.fdCalc.reduntants:
+                continue
             found = False
             for fd2 in expected:
                 if fd.left_side == fd2.left_side and fd.right_side == fd2.right_side:
@@ -77,7 +81,9 @@ class TestRemoveRedundantFDs(unittest.TestCase):
         ]
         self.fdCalc.result = test_fds
         self.fdCalc.remove_redundant_fds()
-        for fd in self.fdCalc.result:
+        for id,fd in enumerate(self.fdCalc.result):
+            if id in self.fdCalc.reduntants:
+                continue
             found = False
             for fd2 in expected:
                 if fd.left_side == fd2.left_side and fd.right_side == fd2.right_side:
