@@ -8,23 +8,75 @@ from pandas_reader import pandas_reader
 
 class FDCalc:
     data: DataFrame
-    super_keys = []
+    super_keys = []  # unique fds
+    candidate_keys = []
+    reduntants = set()
     result = []
     fd_index = 0
     nb_atts = 0
     attributes = []
 
-    def __init__(self):
+    def start(self):
         self.data = pandas_reader.read_pandas()
 
         self.attributes = list(self.data)
         self.nb_atts = len(self.attributes)
-        self.start()
-
-    def start(self):
         self.calc_fds()
         self.calc_candidate_keys()
+        if input("Try to remove reduntant fds? y/n (work in progress) ").lower() == "y":
+            self.remove_redundant_fds()
+        self.print_candidate_keys()
 
+    def remove_redundant_fds(self):
+        """
+        remove fds which can be recreated by composition and union (Armstrong axioms)
+        """
+        for id, fd in enumerate(self.result):
+            if len(fd.left_side) == 1:
+                continue
+
+            prod = set()
+            for attr in fd.left_side:
+                prod.add(attr)
+            for attr in fd.right_side:
+                prod.add(attr)
+
+            temp = []
+            for id2, fd2 in enumerate(self.result):
+                if id == id2:
+                    continue
+                if (
+                    len(fd2.left_side) >= len(fd.left_side)
+                ):  # we cannot use fd2 to construct fd if it contains more attributes than fd
+                    break
+                count_left = 0
+                for attr in fd2.left_side:
+                    if attr in fd.left_side:
+                        count_left += 1
+                if count_left == len(
+                    fd2.left_side
+                ):  # all left hand side attrs from fd2 are present in fd
+                    # now we check if there is an attribute that is determined by the lhs fd2 which is also determined by the lhs fd
+                    temp.append(id2)
+            print(f"for {fd.to_string()}, {[id2 + 1 for id2 in temp]}")
+            # calculate everything determined by what we collected
+            prod2 = set()
+            for id3 in temp:
+                fd_temp = self.result[id3]
+                for att in fd_temp.left_side:
+                    prod2.add(att)
+                for att in fd_temp.right_side:
+                    prod2.add(att)
+            if prod == prod2: # if everything determined by the lhs of fd is also determined by the lhs of fd2, fd is reduntant
+                print(f"{id + 1} reduntant")
+                self.reduntants.add(id)
+        i = 1
+
+        for id, fd in enumerate(self.result):
+            if id in self.reduntants:
+                continue
+            print(f"({i}) {fd.to_string()}")
+            i += 1
 
     def calc_fds(self):
         for i in range(1, self.nb_atts):
@@ -36,17 +88,22 @@ class FDCalc:
             if len(res_unique) < len(res):
                 self.calc_repeating_fds(res, res_unique)
 
-    def calc_candidate_keys(self):
-        # calculate candidate key
-        if len(self.super_keys) == 0:
+    def print_candidate_keys(self):
+        if len(self.candidate_keys) == 0:
             print("no candidate keys")
         else:
             print("candidate keys")
+            for fd in self.candidate_keys:
+                print(f"{fd.left_side}")
+
+    def calc_candidate_keys(self):
+        # calculate candidate key
+        if len(self.super_keys) != 0:
             min_len = len(self.super_keys[0].left_side)
             for fd in self.super_keys:
                 if len(fd.left_side) > min_len:
                     break
-                print(f"{fd.left_side}")
+                self.candidate_keys.append(fd)
 
     def calc_unique_fds(self, res):
         res_non_unique = {}
@@ -191,4 +248,4 @@ class FDCalc:
 
 
 if __name__ == "__main__":
-    FDCalc()
+    FDCalc().start()
