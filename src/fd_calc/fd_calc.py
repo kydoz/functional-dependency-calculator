@@ -8,8 +8,9 @@ from pandas_reader import pandas_reader
 
 class FDCalc:
     data: DataFrame
-    super_keys = [] #unique fds
+    super_keys = []  # unique fds
     candidate_keys = []
+    reduntants = set()
     result = []
     fd_index = 0
     nb_atts = 0
@@ -17,7 +18,7 @@ class FDCalc:
 
     def start(self):
         self.data = pandas_reader.read_pandas()
-        
+
         self.attributes = list(self.data)
         self.nb_atts = len(self.attributes)
         self.calc_fds()
@@ -30,7 +31,6 @@ class FDCalc:
         """
         remove fds which can be recreated by composition and union (Armstrong axioms)
         """
-        reduntants = set()
         for id, fd in enumerate(self.result):
             if len(fd.left_side) == 1:
                 continue
@@ -60,27 +60,23 @@ class FDCalc:
                     temp.append(id2)
             print(f"for {fd.to_string()}, {[id2 + 1 for id2 in temp]}")
             # calculate everything determined by what we collected
-            prod = set()
+            prod2 = set()
             for id3 in temp:
                 fd_temp = self.result[id3]
                 for att in fd_temp.left_side:
-                    prod.add(att)
+                    prod2.add(att)
                 for att in fd_temp.right_side:
-                    prod.add(att)
-            count = 0
-            for att in fd.right_side:
-                if att in prod:
-                    count += 1
-            if count == len(fd.right_side): # if everything determined by the lhs of fd is also determined by the lhs of fd2, fd is reduntant
+                    prod2.add(att)
+            if prod == prod2: # if everything determined by the lhs of fd is also determined by the lhs of fd2, fd is reduntant
                 print(f"{id + 1} reduntant")
-                reduntants.add(id)
-        i=1
+                self.reduntants.add(id)
+        i = 1
+
         for id, fd in enumerate(self.result):
-            if id in reduntants:
-                self.result.pop(id)
+            if id in self.reduntants:
                 continue
             print(f"({i}) {fd.to_string()}")
-            i+=1
+            i += 1
 
     def calc_fds(self):
         for i in range(1, self.nb_atts):
@@ -93,7 +89,7 @@ class FDCalc:
                 self.calc_repeating_fds(res, res_unique)
 
     def print_candidate_keys(self):
-        if len(self.candidate_keys)==0:
+        if len(self.candidate_keys) == 0:
             print("no candidate keys")
         else:
             print("candidate keys")
